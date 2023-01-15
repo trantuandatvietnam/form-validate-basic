@@ -82,6 +82,10 @@ function Validator(option) {
             input.checked && (values[input.name] = input.value);
             break;
           }
+          case "file": {
+            values[input.name] = input.files;
+            break;
+          }
           default:
             values[input.name] = input.value;
         }

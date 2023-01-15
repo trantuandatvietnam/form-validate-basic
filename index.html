@@ -66,6 +66,18 @@
         </div>
 
         <div class="form-group">
+          <label for="file" class="form-label">File</label>
+          <input
+            id="file"
+            name="file"
+            placeholder="Nhập lại mật khẩu"
+            type="file"
+            class="form-control"
+          />
+          <span class="form-message"></span>
+        </div>
+
+        <div class="form-group">
           <label class="form-label">Giới tính</label>
           <div class="form-checkbox">
             <input
@@ -125,6 +137,7 @@
         Validator.minLength("#password", 6),
         Validator.isRequired("#password_confirmation"),
         Validator.isRequired("#province"),
+        Validator.isRequired("#file"),
         Validator.isConfirmed(
           "#password_confirmation",
           function () {
